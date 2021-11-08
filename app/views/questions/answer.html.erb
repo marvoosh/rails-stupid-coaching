@@ -1,0 +1,22 @@
+
+
+<div class='box'>
+  <p><%= @answer %></p>
+  <p><em><%= '-You' %></em></p>
+</div>
+
+<div style='background-color:#FFFFE1' class='box'>
+  <p><strong>
+  <% if @answer == 'I am going to work' %>
+    <%= 'Great!' %>
+  <% elsif @answer.end_with?('?') %>
+    <%= 'Silly question, get dressed and go to work!' %>
+  <% else %>
+    <%= "I don't care, get dressed and go to work!" %>
+  <% end %>
+  </strong></p>
+
+  <p><em><%= '-Your Coach' %></em></p>
+</div>
+
+<a href="/ask">Ask a new question</a>
